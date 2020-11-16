@@ -12,11 +12,9 @@
 
 #include "get_next_line.h"
 
-
-size_t  ft_gnl_strlen(char *s)
+size_t	ft_gnl_strlen(char *s)
 {
 	size_t i;
-
 
 	if (!s)
 		return (0);
@@ -26,7 +24,7 @@ size_t  ft_gnl_strlen(char *s)
 	return (i);
 }
 
-char    *ft_gnl_strdup(char *s1)
+char	*ft_gnl_strdup(char *s1)
 {
 	char	*ptr;
 	int		len;
@@ -48,17 +46,16 @@ char    *ft_gnl_strdup(char *s1)
 	return (ptr);
 }
 
-
-char    *ft_gnl_strjoin(char *s1, char *s2)
+char	*ft_gnl_strjoin(char *s1, char *s2)
 {
-	char    *result;
-	size_t  len;
-	size_t  i;
+	char	*result;
+	size_t	len;
+	size_t	i;
 	char	*tmp;
 
 	tmp = s1;
 	i = 0;
-	len = ft_gnl_strlen(s1) + ft_gnl_strlen(s2) + 1; // выделяет в некоторых случаях больше памяти
+	len = ft_gnl_strlen(s1) + ft_gnl_strlen(s2) + 1;
 	result = (char *)malloc(sizeof(char) * len);
 	if (!result)
 		return (NULL);
@@ -72,7 +69,7 @@ char    *ft_gnl_strjoin(char *s1, char *s2)
 	return (result);
 }
 
-int 	index_of_char(char *s, char c)
+int		index_of_char(char *s, char c)
 {
 	int index;
 

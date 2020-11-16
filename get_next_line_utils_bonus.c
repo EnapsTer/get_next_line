@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aherlind <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,11 +12,9 @@
 
 #include "get_next_line_bonus.h"
 
-
-size_t  ft_gnl_strlen(char *s)
+size_t	ft_gnl_strlen(char *s)
 {
 	size_t i;
-
 
 	if (!s)
 		return (0);
@@ -26,7 +24,7 @@ size_t  ft_gnl_strlen(char *s)
 	return (i);
 }
 
-char    *ft_gnl_strdup(char *s1)
+char	*ft_gnl_strdup(char *s1)
 {
 	char	*ptr;
 	int		len;
@@ -48,12 +46,11 @@ char    *ft_gnl_strdup(char *s1)
 	return (ptr);
 }
 
-
-char    *ft_gnl_strjoin(char *s1, char *s2)
+char	*ft_gnl_strjoin(char *s1, char *s2)
 {
-	char    *result;
-	size_t  len;
-	size_t  i;
+	char	*result;
+	size_t	len;
+	size_t	i;
 	char	*tmp;
 
 	tmp = s1;
@@ -72,16 +69,13 @@ char    *ft_gnl_strjoin(char *s1, char *s2)
 	return (result);
 }
 
-
-char    *ft_gnl_strchr(char *s, int c)
+int		index_of_char(char *s, char c)
 {
-	if (c == 0)
-		return ((char *)(s + ft_gnl_strlen(s)));
-	while (*s)
-	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s++;
-	}
-	return (NULL);
+	int index;
+
+	index = -1;
+	while (s[++index])
+		if (s[index] == c)
+			return (index);
+	return (-1);
 }

@@ -11,19 +11,18 @@
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
-#define GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-#include <stdlib.h>
-#include <unistd.h>
-#include <stdio.h> //УДАЛИТЬ
+# include <stdlib.h>
+# include <unistd.h>
 
-int	get_next_line(int fd, char **line);
+int		get_next_line(int fd, char **line);
 
-char    *ft_gnl_strdup(char *s1);
+char	*ft_gnl_strdup(char *s1);
 
-size_t  ft_gnl_strlen(char *s);
+size_t	ft_gnl_strlen(char *s);
 
-char    *ft_gnl_strjoin(char *s1, char *s2);
+char	*ft_gnl_strjoin(char *s1, char *s2);
 
-int 	index_of_char(char *s, char c);
+int		index_of_char(char *s, char c);
 #endif
